@@ -117,7 +117,7 @@ stages:
           - task: AzureWebApp@1
             displayName: 'Azure App Service Deploy: backend'
             inputs:
-              azureSubscription: 'bank-azure'
+              azureSubscription: 'bank_azure'
               appName: '$(WebAppNameDev)'
               package: '$(Pipeline.Workspace)/drop/target/*.jar'
  
@@ -141,7 +141,7 @@ stages:
           - task: AzureWebApp@1
             displayName: 'Azure App Service Deploy: backend'
             inputs:
-              azureSubscription: 'bank-azure'
+              azureSubscription: 'bank_azure'
               appName: '$(WebAppNameTest)'
               package: '$(Pipeline.Workspace)/drop/target/*.jar'
 
@@ -164,6 +164,6 @@ stages:
           - task: AzureWebApp@1
             displayName: 'Azure App Service Deploy: backend'
             inputs:
-              azureSubscription: 'bank-azure'
+              azureSubscription: 'bank_azure'
               appName: '$(WebAppNameStaging)'
               package: '$(Pipeline.Workspace)/drop/target/*.jar'
